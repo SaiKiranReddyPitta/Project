@@ -1,0 +1,28 @@
+<div class="card mb-3">
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div *ngIf = "object!=null">
+      <div class="container">
+        <div class = "col-xs-5">
+            <img src="../assets/{{object[index].image}}" alt="image" width = 100 height = 200> 
+        </div>
+        <div class="col-xs-1">
+
+        </div>
+        <div class = "col-xs-6">
+          <h4 class="card-title">{{object[index].name}}</h4>
+          <p class="card-text">{{object[index].description}}</p>
+          <p class="card-text">{{object[index].quantity}}</p> 
+          <p>Price: {{object[index].price}}</p>
+          <button color="primary" routerLink="/home" class=" 	glyphicon glyphicon-arrow-left"></button>&nbsp;
+          <button (click)="addToCart()"> Add to cart</button><br><br>
+          <div *ngIf = "added">
+              <p> product added to the cart</p>
+          </div>
+          <textarea name = "review" [(ngModel)] = "rview" placeholder="Leave your review"></textarea>&nbsp;
+          <div class = "c"><button type= "submit" (click)= "review()">Submit</button></div>
+        
+      </div> 
+      </div>
+    </div>
+  </div>
+

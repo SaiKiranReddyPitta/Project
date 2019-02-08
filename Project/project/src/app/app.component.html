@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <img src = "/assets/img2.jpg" class="center">
+  
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" routerLink ="/logo">Online Store</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink = "/home">Home</a></li>
+        <!-- <div class = "a" style= "padding-left: 500px;">
+            <input  [(ngModel)]="filterName" placeholder="Search for your product..">
+            </div> -->
+        <form class="navbar-form navbar-left" action="/action_page.php">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink = '/login'><span class="glyphicon glyphicon-user"></span> Sign In</a></li>
+        <li><a routerLink ='/cart'><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li><a></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <router-outlet></router-outlet>
+  <footer>
+      <a routerLink = '/contactus' ><h2 class="glyphicon glyphicon-envelope" > Contact us</h2></a>
+  </footer>
+</body>
+</html>

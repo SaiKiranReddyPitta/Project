@@ -1,0 +1,12 @@
+<div *ngIf = "cartObjArr.length > 0">
+    <div *ngFor = "let x of cartObjArr">
+    <p>{{x.name}}</p>
+    <img src="../assets/{{x.image}}" alt="image" width = 100 height = 200> 
+    Amount : {{x.price}}
+    </div>
+    Quantity: <br>
+    <input type="number" class="text-center" min = '1' value = "1">
+    <!-- {{cartObjArr.price}} -->
+    
+</div>
+<!-- <button routerLink = "/checkout"> click here to check out</button> -->

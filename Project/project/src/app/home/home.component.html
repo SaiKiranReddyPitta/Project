@@ -1,0 +1,19 @@
+
+<div class = "a" style= "padding-left: 500px;">
+<input  [(ngModel)]="filterName" placeholder="Search for your product..">
+</div>
+<h2 style = "text-align: center">Happy Shopping!!</h2>
+<div class="container">
+    <div *ngFor = 'let name of prods | filterByName:filterName index as i'>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <!-- <nav> -->
+              <div >
+                  <img src="./assets/{{products[i].image}}" style = "width : 120px; height: 200px">  <a class = "b" routerLink = "/product-detail/{{i}}">{{name}}</a>
+
+              </div>
+                <!-- <hr> -->
+            <!-- </nav> -->
+        </div>
+      </div>
+      
+</div>
